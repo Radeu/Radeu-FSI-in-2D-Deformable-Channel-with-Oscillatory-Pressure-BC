@@ -8,7 +8,7 @@ Upon execution, the Python scripts will produce .vtu files suitable for visualiz
 The filenames encode the simulation parameters. For example, FSIGm0pt5Wo1.py corresponds to an elastoviscous number of 0.5 and a Womersley number of 1.
 
 ## Generating Figures
-The provided FinalPlotting.m script contains all the necessary code to generate the desired figures. To select a specific figure, uncomment the corresponding control_new option (lines 7–17) and comment out the others. Additionally, specify the required directories in the FolderList (line 5).
+The provided FinalPlotting.m script in /src directory contains all the necessary code to generate the desired figures. To select a specific figure, uncomment the corresponding control_new option (lines 7–17) and comment out the others. Additionally, specify the required directories in the FolderList (line 5).
 Note: In the MATLAB script, Ux corresponds to Uz as presented in the paper.
 
 To execute the Python scripts, first activate the FEniCS Project environment, and then run the command:
