@@ -2,17 +2,13 @@
 This repository provides Python scripts available in /src directory (developed for use with FEniCS) to simulate fluid–structure interaction in a two-dimensional deformable channel subjected to an oscillatory pressure boundary condition at the inlet. The implementation is adapted from publicly available code by Dr. David Kamensky (https://github.com/david-kamensky/mae-207-fea-for-coupled-problems/tree/master/fsi), originally formulated for a velocity-controlled case. In this work, the model has been extended to a pressure-controlled configuration.
 
 ## Running FEniCS Simulations
-To run simulations using FEniCS, modify the properties/ parameters such as channel length, fluid viscosity, and fluid density based in the given dimensionless numbers by adjusting lines 13, 200, 202, 266, and 267 in the provided Python scripts. It is assumed that other parameters remain unchanged.
-Upon execution, the Python scripts will produce .vtu files suitable for visualization in ParaView, along with .csv files containing data such as velocity, pressure, mesh displacement, and flow rate. These .csv files will subsequently be used in FinalPlotting.m to generate the corresponding curves. \\
+To run simulations using FEniCS, modify the properties/ parameters such as channel length, fluid viscosity, and fluid density based in the given dimensionless numbers by adjusting lines 13, 200, 202, 266, and 267 in the provided Python scripts. It is assumed that other parameters remain unchanged. To execute the Python scripts, first activate the FEniCS Project environment, and then run the command: python3 filename.py. Upon execution, the Python scripts will produce .vtu files suitable for visualization in ParaView, along with .csv files containing data such as velocity, pressure, mesh displacement, and flow rate. These .csv files will subsequently be used in FinalPlotting.m to generate the corresponding curves. \
 
 The filenames encode the simulation parameters. For example, FSIGm0pt5Wo1.py corresponds to an elastoviscous number of 0.5 and a Womersley number of 1.
 
 ## Generating Figures
 The provided FinalPlotting.m script in /src directory contains all the necessary code to generate the desired figures. To select a specific figure, uncomment the corresponding control_new option (lines 7–17) and comment out the others. Additionally, specify the required directories in the FolderList (line 5).
 Note: In the MATLAB script, Ux corresponds to Uz as presented in the paper.
-
-To execute the Python scripts, first activate the FEniCS Project environment, and then run the command:
-python3 filename.py
 
 ## Data Download
 The dataset is hosted on OneDrive due to size constraints.  
